@@ -57,7 +57,8 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: LIVERELOAD_PORT,
-					hostname: 'localhost'
+					hostname: 'localhost',
+					livereload: true
 				}
 			}
 		},
@@ -86,7 +87,7 @@ module.exports = function(grunt) {
 		
 		watch: {
 			options: {
-				livereload:  LIVERELOAD_PORT,
+				livereload: true,
 			},
 			// Enables grunt watch to reload upon config file changes
 			configFiles: {
