@@ -12,6 +12,10 @@
 }
 
 .timeline {
+	:before {
+		left:14px;
+	}
+	
 	.entry {
 		.time, .content {
 			width:100%;
@@ -20,6 +24,13 @@
 		.content {
 			padding-left:40px;
 		}
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.timeline:before {
+		left:9px;
 	}
 }
 
