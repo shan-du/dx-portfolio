@@ -1,4 +1,4 @@
-# dx-portfolio
+# dx-portfolio 0.4.1
 ## Install npm Packages & Dependencies
 ```
 > npm install
