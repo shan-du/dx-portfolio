@@ -1510,7 +1510,9 @@ window.particlesJS = function(tag_id, params){
   canvas_el.style.height = "100%";
 
   /* append canvas */
-  var canvas = document.getElementById(tag_id).appendChild(canvas_el);
+  //var canvas = document.getElementById(tag_id).appendChild(canvas_el);
+	var introText = document.getElementById("intro-text");
+  var canvas = document.getElementById(tag_id).insertBefore(canvas_el, introText);
 
   /* launch particle.js */
   if(canvas != null){

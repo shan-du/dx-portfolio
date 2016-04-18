@@ -149,7 +149,9 @@
     });
 
     /* =Skill Bars
+			Uncomment the following block to enable
     -------------------------------------------------------------- */
+		/*
     $('.bar-fill').waypoint({
         handler: function() {
             $(this).each(function() {
@@ -160,6 +162,7 @@
         },
         offset: '95%'
     });
+		*/
 
     /* =Lightbox
     -------------------------------------------------------------- */
@@ -203,9 +206,19 @@
         },
         offset: '95%'
     });
+		
+		/* =Fancy Particles Effects on Hero
+		-------------------------------------------------------------- */
+		if (particlesJS) {
+			particlesJS.load('hero', 'js/particlesjs-config.json', function() {
+				console.log('callback - particles.js config loaded');
+			});
+		}
 
     /* =Contact Form
+			Uncomment the following block to enable
     -------------------------------------------------------------- */
+		/*
     $(function() {
         $('#contact').validate({
 
@@ -257,5 +270,6 @@
                 });
             }
         });
-    });    
+    });  
+		*/
 })();
