@@ -1,0 +1,50 @@
+// colors
+@purple:#796D84;
+@medium-gray:#ADABAB;
+@dark-gray:#595859;
+
+// fonts
+// font:font-style font-variant font-weight font-size/line-height font-family
+@font-lg:16px;
+@font-md:14px;
+@font-sm:12px;
+@font-xs:10px;
+@font-serif:Palatino, 'Times New Roman', serif;
+@font-sans-serif:Quicksand, Helvetica, Arial, sans-serif;
+
+.headerText() {
+	color:@medium-gray;
+	font-family:@font-serif;
+	font-size:@font-xs;
+}
+
+.bodyText() {
+	color:@medium-gray;
+	font-family:@font-sans-serif;
+	font-size:@font-md;
+}
+
+.navText() {
+	color:@medium-gray;
+	font-family:@font-serif;
+	font-size:@font-sm;
+}
+
+.boldText() {
+	color:@dark-gray;
+	font-size:@font-md;
+}
+
+.linkText() {
+	color:@purple;
+	font-family:@font-sans-serif;
+	font-size:@font-md;
+}
+
+.boldLinkText() {
+	.linkText;
+	color:@dark-gray;
+	text-decoration:underline;
+}
+
+// elements

@@ -1,3 +1,33 @@
-body {
-	background-color:white;
+@import "variables.less";
+
+/* ********** Overwrites style.css ********** */
+.hero {
+	background-color:@purple;
+	background-image:none;
+	
+	h1 {
+		color:white;
+		text-align:center;
+	}
+}
+
+.timeline {
+	.entry {
+		.time, .content {
+			width:100%;
+		}
+		
+		.content {
+			padding-left:40px;
+		}
+	}
+}
+
+/* ********** Overwrites framework.css ********** */
+
+
+
+/* ********** Custom CSS ********** */
+footer {
+	text-align:center;
 }
