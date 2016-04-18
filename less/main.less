@@ -11,12 +11,8 @@
 	}
 }
 
-.scroll-to {
-	z-index:10;
-}
-
 .timeline {
-	:before {
+	&:before {
 		left:14px;
 	}
 	
@@ -43,6 +39,41 @@
 
 
 /* ********** Custom CSS ********** */
+a {
+	.linkText;
+	
+	&:hover, &:focus, &:active {
+		.boldLinkText;
+	}
+}
+
+section {
+	h1 {
+		font-family:@font-sans-serif;
+	}
+	
+	h2 {
+		.headerText;
+	}
+	
+	p, ul {
+		.bodyText;
+		
+		span {
+			.boldText;
+		}
+	}
+	
+	ul {
+		list-style:initial;
+		margin-left:15px;		
+	}
+}
+
+footer {
+	text-align:center;
+}
+
 .hero {
 	canvas {
 		position:absolute;
@@ -51,6 +82,7 @@
 	}
 }
 
-footer {
-	text-align:center;
+.scroll-to {
+	left:48%;
+	z-index:10;
 }
