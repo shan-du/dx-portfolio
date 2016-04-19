@@ -7,22 +7,28 @@
 	color: @ruby-red;
 }
 
-#side-nav a.active:after, #side-nav a:hover:after {
-	border: 2px solid @purple;
-}
-
-#side-nav #top:hover:after {
-	border-left: 4px solid @purple;
-	border-top: 4px solid @purple;
-}
+#side-nav {
+	a.active:after, a:hover:after {
+		border: 2px solid @purple;
+	}
+	
+	#top:hover:after {
+		border-left: 4px solid @purple;
+		border-top: 4px solid @purple;
+	}
+} 
 
 .bar-fill {
 	background: @purple;
 }
 
-.timeline .entry .time.on:before {
-	border: 1px solid @purple;
-	background: @purple;
+.timeline .entry {
+	.time:before, .time.on:before {
+		border: 1px solid @purple;
+	}
+	.time.on:before {
+		background: @purple;
+	}
 }
 
 .button {

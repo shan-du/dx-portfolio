@@ -58,7 +58,7 @@
         });
 
         heroContent.css({
-            "margin-top": contentMargin + "px"
+            "margin-top": (contentMargin - 30) + "px"
         });
 
     }

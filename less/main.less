@@ -47,7 +47,7 @@ footer {
 	
 	h1 {
 		color:white;
-		font-size:40px;
+		font-size:@font-h1;
 		line-height:1.2;
 		text-align:center;
 	}
@@ -86,6 +86,10 @@ a {
 section {
 	h1 {
 		font-family:@font-sans-serif;
+		
+		a {
+			font-size:@font-h1;
+		}
 	}
 	
 	h2 {
@@ -115,6 +119,9 @@ footer {
 }
 
 .hero {
+
+	.verticalGradient;
+
 	h1 {
 		margin-top:35px;
 	}
@@ -140,6 +147,12 @@ footer {
 .timeline {
 	.time {
 		p:first-child {
+			padding-bottom:0;
+		}
+	}
+	
+	.content {
+		p:last-child {
 			padding-bottom:0;
 		}
 	}
