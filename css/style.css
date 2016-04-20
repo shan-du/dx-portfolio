@@ -903,6 +903,7 @@ header .container {
 
 /* =Contact
 -------------------------------------------------------------- */
+/*
 fieldset {
 	padding: 0;
 	margin: 0;
@@ -1006,7 +1007,7 @@ label.error {
 	text-transform: uppercase;
 	margin-bottom: 20px;	
 }
-
+*/
 
 /* =Footer
 -------------------------------------------------------------- */
@@ -1025,11 +1026,13 @@ footer {
 	color: #212121;
 	opacity: .5;
 
+	/*
 	-webkit-transition: all 0.3s ease-in-out;
 	   -moz-transition: all 0.3s ease-in-out;
 	   	-ms-transition: all 0.3s ease-in-out;
 	   	 -o-transition: all 0.3s ease-in-out;
 			transition: all 0.3s ease-in-out;
+	*/
 }
 
 .social-list a:hover {
