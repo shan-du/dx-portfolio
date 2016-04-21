@@ -670,7 +670,7 @@ header .container {
 	   -moz-border-radius: 5px;
 			border-radius: 5px;
 
-	box-shadow: 0 2px 8px rgba(14,21,47,0.25);
+	/*box-shadow: 0 2px 8px rgba(14,21,47,0.25);*/
 }
 
 .atvImg-container {
@@ -772,7 +772,8 @@ header .container {
 	width: 1px;
 	height: 100%;
 	position: absolute;
-	bottom: -200%;
+	/*bottom: -200%;*/
+	top:-200%;
 	left: 19px;
 	background: #d1d1d1;
 	-webkit-transition: all 2s ease-out;
@@ -783,7 +784,8 @@ header .container {
 }
 
 .timeline.on:before {
-	bottom: -10px;
+	/*bottom: -10px;*/
+	top:10px;
 }
 
 .timeline .entry {

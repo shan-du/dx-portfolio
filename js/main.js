@@ -184,16 +184,16 @@
 
     /* =Thumbnail Effects
     -------------------------------------------------------------- */
-    atvImg();
+    //atvImg();
 
     function thumbHeight() {
         var imageContainer = $('.atvImg'),
-            ww = $(window).width();
+            ww = $(window).width(),
+						wxhRatio = $(".folio-list").attr("data-img-aspect-ratio");
 
         imageContainer.css({
-            "height": $('.folio-list li').width() + "px"
+            "height": $('.folio-list li').width()/wxhRatio + "px"
         });
-
     }
 
     thumbHeight();
@@ -214,6 +214,26 @@
 				console.log('callback - particles.js config loaded');
 			});
 		}
+		
+		/* =Fancy timeLINE patch, line does not extend beyond the last time line entry
+		-------------------------------------------------------------- */
+		var hideLineOnLastEntry = (function(){
+			var timeline = $(".timeline");
+			var timelineHeight = 0;
+			var lastEntryHeight = 0;
+			var element;
+			
+			timeline.each(function(index){
+				element = $(this);
+				timelineHeight = element.height();
+				lastEntryHeight = element.find(".entry:last-child").height();
+				
+				element.height((timelineHeight - lastEntryHeight) + "px");
+				element.css({
+					"margin-bottom" : lastEntryHeight + "px"
+				});
+			});
+		})();
 
     /* =Contact Form
 			Uncomment the following block to enable

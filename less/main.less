@@ -54,6 +54,9 @@ footer {
 }
 
 .timeline {
+	overflow:visible;
+	margin-top:0;
+	
 	&:before {
 		width:2px;
 	}
@@ -121,7 +124,7 @@ section {
 		}
 	}
 	
-	ul {
+	ul.experience-list {
 		list-style:initial;
 		margin-left:15px;
 		
@@ -161,6 +164,10 @@ footer {
 	z-index:10;
 }
 
+.timeline-container {
+	overflow:hidden;
+}
+
 .timeline {
 	.time {
 		p:first-child {
@@ -172,6 +179,12 @@ footer {
 		p:last-child {
 			padding-bottom:0;
 		}
+	}
+}
+
+a.lightbox:hover {
+	.atvImg img {
+		box-shadow: 0 2px 8px rgba(14,21,47,0.25);
 	}
 }
 
