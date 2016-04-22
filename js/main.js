@@ -222,11 +222,11 @@
 			var timelineHeight = 0;
 			var lastEntryHeight = 0;
 			var element;
-			
+
 			timeline.each(function(index){
 				element = $(this);
-				timelineHeight = element.height();
-				lastEntryHeight = element.find(".entry:last-child").height();
+				timelineHeight = element.outerHeight(true);
+				lastEntryHeight = element.find(".entry").last().outerHeight(true) + element.find(".projects-gallery").last().outerHeight(true);
 				
 				element.height((timelineHeight - lastEntryHeight) + "px");
 				element.css({
