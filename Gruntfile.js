@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 		cssPath: 'css/',
 		jsPath: 'js/',
 		minCss: 'css/main.min.css',
-		watchFiles: ['less/*', 'css/*', 'js/*'],
+		watchFiles: ['less/*', 'css/*', 'js/*', '*.html'],
 		configFiles: ['Gruntfile.js']
 	};
 	

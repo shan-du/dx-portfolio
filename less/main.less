@@ -168,6 +168,28 @@ footer {
 	overflow:hidden;
 }
 
+.section-symbol {
+	height:60px;
+	
+	span {
+		position:absolute;
+		top:0;
+		display:inline-block;
+		width:40px;
+		height:40px;
+		padding:10px;
+		border-radius:50%;
+		text-align:center;
+		background-color:@purple;
+		
+		.fa {
+			color:white;
+			font-size:18px;
+			line-height:1.2;
+		}
+	}
+}
+
 .timeline {
 	.time {
 		p:first-child {
@@ -195,7 +217,7 @@ a.lightbox:hover {
 
 
 /* Small Devices, Tablets & up */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : @tablet-min-width) {
 	.hero {
 		h1 {
 			font-size:@font-h1-lg;
@@ -207,6 +229,28 @@ a.lightbox:hover {
 			a {
 				font-size:@font-h1-lg;
 			}
+		}
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: @desktop-min-width) {
+	.section-symbol {
+	
+		&:before {
+			content: "\A";
+			display: block;
+			opacity: 1;
+			width: 2px;
+			height: 100%;
+			position: absolute;
+			left:15px;
+			bottom: -6px;
+			background: @light-gray-line;
+		}
+		
+		span {
+			left:-4px;
 		}
 	}
 }

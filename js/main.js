@@ -217,23 +217,41 @@
 		
 		/* =Fancy timeLINE patch, line does not extend beyond the last time line entry
 		-------------------------------------------------------------- */
-		var hideLineOnLastEntry = (function(){
-			var timeline = $(".timeline");
+		function hideLineOnLastEntry() {
 			var timelineHeight = 0;
 			var lastEntryHeight = 0;
 			var element;
-
-			timeline.each(function(index){
+			
+			$(".timeline").each(function(){
 				element = $(this);
 				timelineHeight = element.outerHeight(true);
 				lastEntryHeight = element.find(".entry").last().outerHeight(true) + element.find(".projects-gallery").last().outerHeight(true);
+				
+				// console.log("timelineHeight=", timelineHeight);
+				// console.log("entryHeight=", element.find(".entry").last().outerHeight(true));
+				// console.log("galleryHeight=", element.find(".projects-gallery").last().outerHeight(true));
 				
 				element.height((timelineHeight - lastEntryHeight) + "px");
 				element.css({
 					"margin-bottom" : lastEntryHeight + "px"
 				});
 			});
-		})();
+		}
+		
+		function resetLineHeight() {
+			$(".timeline").each(function(){
+				$(this).height("auto").css({ "margin-bottom" : 0 });
+			});
+		}
+		
+		$(window).load(function() {
+			hideLineOnLastEntry();
+		});
+		$(window).on("orientationchange", function() {
+			resetLineHeight();
+			setTimeout(hideLineOnLastEntry, 500);
+		});
+
 
     /* =Contact Form
 			Uncomment the following block to enable
