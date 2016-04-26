@@ -45,11 +45,16 @@
 	color:@purple;
 	font-family:@font-sans-serif;
 	font-size:@font-md;
+	font-weight:900;
 }
 
-.boldLinkText() {
-	color:@dark-gray;
-	text-decoration:underline;
+.hoverLink() {
+	text-decoration:none;
+	border-bottom:1px solid @medium-gray;
+}
+
+.hoverLinkClean() {
+	border-bottom:none;
 }
 
 // mixins

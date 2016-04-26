@@ -18,6 +18,8 @@ footer {
 		}
 		
 		&.active, &:hover, &:focus {
+			.hoverLinkClean;
+			
 			&:after {
 				top:4px;
 			}
@@ -51,6 +53,13 @@ footer {
 		line-height:1.2;
 		text-align:center;
 	}
+}
+
+.scroll-to {
+	width:75px;
+	height:70px;
+	font-size:@font-xs+1;
+	color:white;
 }
 
 .timeline {
@@ -89,6 +98,18 @@ footer {
 	}
 }
 
+.padded-top {
+	padding-top:60px;
+}
+
+.padded-bottom {
+	padding-bottom:150px;
+}
+
+.padded {
+	.padded-top;
+	.padded-bottom;
+}
 
 /* ********** Overwrites framework.css ********** */
 
@@ -99,7 +120,7 @@ a {
 	.linkText;
 	
 	&:hover, &:focus, &:active {
-		.boldLinkText;
+		.hoverLink;
 	}
 }
 
@@ -162,6 +183,11 @@ footer {
 .scroll-to {
 	left:46%;
 	z-index:10;
+	text-align:center;
+	
+	&:hover, &:focus, &:active {
+		.hoverLinkClean;
+	}
 }
 
 .timeline-container {
@@ -201,12 +227,6 @@ footer {
 		p:last-child {
 			padding-bottom:0;
 		}
-	}
-}
-
-a.lightbox:hover {
-	.atvImg img {
-		box-shadow: 0 2px 8px rgba(14,21,47,0.25);
 	}
 }
 
