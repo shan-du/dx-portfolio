@@ -1,4 +1,4 @@
-# v 0.8.5.
+# v 0.8.6.
 ## CONTENT UPDATE NOTES
 ---
 ### Setup (Mac)
@@ -17,6 +17,13 @@ If you are only updating HTML & JS, and you are not a web derp, follow the proce
 6. Otherwise, run `git commit -am "DESCRIPTION OF YOUR CHANGES"`
 7. Run `git push origin master`
 8. Enter your GitHub credentials
+ 
+**Adding Files/Images**
+1. Create/Copy the files to the desired folder
+2. Repeat step 2~4 from previous section
+3. Add the new files, run `git add DIRECTORY/FILE_NAME`
+4. Run `git commit -m "DESCRIPTION OF CHANGES"`, notice `-m` here, NOT `-am`
+5. Repeat step 7 & 8 from previous section
 
 **Sync Code onto Server**
 1. In terminal window, run `ssh awesomedels@samuel-chase.dreamhost.com`
