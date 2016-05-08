@@ -1,4 +1,4 @@
-# v 0.8.6.
+# v 1.0.0
 ## CONTENT UPDATE NOTES
 ---
 ### Setup (Mac)
